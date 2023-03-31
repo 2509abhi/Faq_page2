@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      background-image: linear-gradient(rgb(134, 32, 134), rgb(235, 62, 235), rgb(134, 32, 134));
+      font-family: sans-serif;
+      color: grey;
+      position: relative;
+      z-index: 1;
+    }
+
+    .h3 {
+      color: black;
+    }
+
+    a {
+      text-decoration-line: none;
+      color: grey;
+    }
+
+    a:hover {
+      color: orange;
+    }
+
+    #body {
+      background-color: #fff;
+      border-radius: 20px;
+      display: flex;
+      height: 100%;
+      margin: 0 10%;
+      padding: 30px;
+      width: 1000px;
+      position: relative;
+      z-index: -1;
+
+    }
+
+    .write {
+      width: 1000px;
+
+    }
+    
+    .mystyle {
+      display: none;
+    }
+
+    .line {
+      display: flex;
+    }
+
+    .img1 {
+    background-image: url(images/bg-pattern-desktop.svg);
+      position: relative;
+      right: 100px;
+      z-index: -1;
+    }
+
+    .img2 {
+      position: relative;
+      bottom: 13rem;
+      right: 10rem;
+      z-index: 1;
+    }
+
+    .arrow {
+      padding-left: 200px;
+      padding-top: 20px;
+      height: 10px;
+    }
+    
+    .attribution {
+      margin: 0;
+      padding: 0;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+    .mob{
+      display: none;
+    }
+    @media (max-width:500px) {
+      #body{
+        display: block;
+        margin-top: 3rem;
+        width: 350px;
+      }
+      .write{
+        width: 350px;
+      }
+      .img{
+        display: none;
+      }
+      .mob{
+        background-image: url(images/bg-pattern-mobile.svg);
+        display: block;
+        height: 250px;
+        width: 250px;
+        position: relative;
+        left: 4rem;
+        bottom: 4rem;
+      }
+      .arrow {
+        padding-left: 0;
+      }
+      
+    }
+  </style>
+</head>
+
+<body>
+  <main id="body">
+    <div class="img">
+      <img class="img1" src="images/illustration-woman-online-desktop.svg" alt="Good-women">
+      <img class="img2" src="images/illustration-box-desktop.svg" alt="at-the-rate-box">
+    </div>
+    <div class="mob">
+      <img class="img-mob" src="images/illustration-woman-online-mobile.svg" alt="Good-women">
+    </div>
+    <div class="write">
+
+      <h1>FAQ</h1>
+      <div class="line">
+        <a class="line" href="#">
+          <h3>How many team members can I invite?</h3>
+        </a>
+        <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow">
+      </div>
+      <p class="mystyle">You can invite up to 2 additional users on the Free plan. There is no limit on
+        team members for the Premium plan.</p>
+      <hr>
+      <div class="line">
+        <a class="line" href="#">
+          <h3>What is the maximum file upload size?</h3>
+        </a>
+        <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow">
+
+      </div>
+      <p class="mystyle">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+      <hr>
+
+      <div class="line">
+        <a class="line" href="#">
+          <h3>How do I reset my password?</h3>
+        </a>
+        <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow">
+
+      </div>
+      <p class="mystyle"> Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.</p>
+
+      <hr>
+      <div class="line">
+        <a class="line" href="#">
+          <h3>Can I cancel my subscription?</h3>
+        </a>
+        <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow">
+      </div>
+      <p class="mystyle">Yes! Send us a message and we'll process your request no questions asked.</p>
+      <hr>
+
+      <div class="line">
+        <a class="line" href="#">
+          <h3>Do you provide additional support? </h3>
+        </a>
+        <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow">
+
+      </div>
+      <p class="mystyle">Chat and email support is available 24/7. Phone lines are open during normal business hours.
+      </p>
+      <hr>
+    </div>
+  </main>
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Abhishek Bansal</a>.</p>
+  </div>
+  <script>
+
+    for (let i = 0; i < document.querySelectorAll("h3").length; i++) {
+      document.querySelectorAll("h3")[i].addEventListener("click", function () {
+        document.querySelectorAll("p")[i].classList.toggle("mystyle");
+        document.querySelectorAll("h3")[i].classList.toggle("h3");
+      })
+
+    }
+
+
+
+  </script>
+</body>
+
+</html>
